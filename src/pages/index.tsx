@@ -28,7 +28,7 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FileUser alt="Resume" color="currentColor" size={24} />
+            <FileUser aria-label="Resume" color="currentColor" size={24} />
           </a>
           <a
             href="https://bsky.app/profile/christianhall.dev"

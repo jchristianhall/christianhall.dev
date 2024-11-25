@@ -10,7 +10,8 @@
     "next": "^15.0.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "use-scramble": "^2.2.15"
   },
   "scripts": {
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -27,7 +28,10 @@
     "url": "https://github.com/jchristianhall/jchristianhall.github.io/issues"
   },
   "devDependencies": {
+    "@types/node": "^22.9.3",
+    "@types/react": "^18.3.12",
     "prettier": "^3.3.3",
+    "typescript": "^5.7.2",
     "vercel": "^46.0.2"
   }
 }
