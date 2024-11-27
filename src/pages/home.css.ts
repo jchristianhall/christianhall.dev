@@ -1,44 +1,37 @@
 import { style } from '@vanilla-extract/css';
 
 export const home = style({
-  position: 'relative',
   display: 'flex',
   flex: 1,
   backgroundColor: '#191d21',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 export const homeContent = style({
-  position: 'relative',
-  alignItems: 'center',
-  justifyContent: 'center',
   flexDirection: 'column',
+  width: '50%',
   display: 'flex',
-  flex: 1,
-  zIndex: 1,
+  gap: '2rem',
+});
+
+export const homeNameContainer = style({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '0.5rem',
 });
 
 export const homeName = style({
   fontFamily: "'Josefin Sans', sans-serif",
   color: 'rgb(117, 242, 139)',
   display: 'block',
-  paddingBottom: '0.5rem',
+  fontSize: '1.5rem',
 });
 
-export const homeByline = style({
+export const homeMainCopy = style({
   fontFamily: "'Josefin Sans', sans-serif",
   color: 'white',
-  paddingBottom: '1.5rem',
-});
-
-export const homeBio = style({
-  fontFamily: "'Josefin Sans', sans-serif",
-  color: 'white',
-  display: 'block',
-  width: '90%',
-  paddingBottom: '1.5rem',
-  lineHeight: 1.5,
-  fontSize: '1rem',
-  textAlign: 'center',
+  fontSize: '1.5rem',
 });
 
 export const homeLinks = style({
@@ -70,4 +63,6 @@ export const homeFooter = style({
   bottom: '1rem',
   fontSize: '0.8rem',
   position: 'absolute',
+  left: '50%',
+  transform: 'translateX(-50%)',
 });
