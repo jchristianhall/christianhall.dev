@@ -1,10 +1,11 @@
 import { FileUser } from 'lucide-react'
 import BlueskyIcon from '../images/bluesky.svg'
 import GithubIcon from '../images/github.svg'
+import * as styles from './home.css'
 
 function Home() {
   return (
-    <main className="Home">
+    <main className={styles.home}>
       <div className="HomeBackground">
         <div className="HomeBackground-element HomeBackground-top1"></div>
         <div className="HomeBackground-element HomeBackground-top2"></div>
@@ -12,27 +13,29 @@ function Home() {
         <div className="HomeBackground-element HomeBackground-bottom2"></div>
       </div>
 
-      <div className="Home-content">
-        <h1 className="Home-name">Christian Hall</h1>
-        <h2 className="Home-byline">Staff Product Engineer</h2>
+      <div className={styles.homeContent}>
+        <h1 className={styles.homeName}>Christian Hall</h1>
+        <h2 className={styles.homeByline}>Staff Product Engineer</h2>
 
-        <p className="Home-bio">
+        <p className={styles.homeBio}>
           I’m a product-oriented software engineer who cares deeply for usable
           designs and sustainable development. Let’s build something together.
         </p>
 
-        <div className="Home-links">
+        <div className={styles.homeLinks}>
           <a
             href="/Christian Hall Resume.pdf"
-            className="Home-link"
+            className={styles.homeLink}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FileUser aria-label="Resume" color="currentColor" size={24} />
+            <div role="img" aria-label="Resume">
+              <FileUser color="currentColor" size={24} />
+            </div>
           </a>
           <a
             href="https://bsky.app/profile/christianhall.dev"
-            className="Home-link"
+            className={styles.homeLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,7 +48,7 @@ function Home() {
           </a>
           <a
             href="https://github.com/jchristianhall"
-            className="Home-link"
+            className={styles.homeLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +61,7 @@ function Home() {
           </a>
         </div>
 
-        <footer className="Home-footer">
+        <footer className={styles.homeFooter}>
           Crafted in Tennessee. &copy; {new Date().getFullYear()}
         </footer>
       </div>
