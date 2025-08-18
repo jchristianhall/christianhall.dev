@@ -22,12 +22,19 @@ function Home() {
         </p>
 
         <div className="Home-links">
-          <a href="/Christian Hall Resume.pdf" className="Home-link">
+          <a
+            href="/Christian Hall Resume.pdf"
+            className="Home-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FileUser alt="Resume" color="currentColor" size={24} />
           </a>
           <a
             href="https://bsky.app/profile/christianhall.dev"
             className="Home-link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <BlueskyIcon
               alt="Bluesky"
@@ -36,7 +43,12 @@ function Home() {
               color="currentColor"
             />
           </a>
-          <a href="https://github.com/jchristianhall" className="Home-link">
+          <a
+            href="https://github.com/jchristianhall"
+            className="Home-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GithubIcon
               alt="GitHub"
               width={24}

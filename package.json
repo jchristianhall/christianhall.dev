@@ -6,7 +6,7 @@
   "version": "4.0.1",
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
-    "lucide-react": "^0.539.0",
+    "lucide-react": "^0.540.0",
     "next": "^15.0.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "prettier": "^3.3.3",
-    "vercel": "^45.0.9"
+    "vercel": "^46.0.2"
   }
 }
