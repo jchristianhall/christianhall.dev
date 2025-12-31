@@ -1,7 +1,6 @@
-import './global.css'
-import Head from 'next/head'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function App({ Component, pageProps }) {
+export default function Document() {
   const gosquaredSnippet = `!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
   arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
   d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
@@ -11,7 +10,7 @@ export default function App({ Component, pageProps }) {
   _gs('set', 'anonymizeIP', true);`
 
   return (
-    <>
+    <Html>
       <Head>
         {process.env.NODE_ENV === 'production' && (
           <script
@@ -24,7 +23,10 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <Component {...pageProps} />
-    </>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
   )
 }
