@@ -6,48 +6,78 @@ import { useScramble } from 'use-scramble'
 import { useState } from 'react'
 
 function Home() {
+  const [preName, setPreName] = useState('')
   const [name, setName] = useState('')
+  const [period, setPeriod] = useState('')
+  const [bio, setBio] = useState('')
+  const [showIcons, setShowIcons] = useState(false)
+
   const { ref: helloRef } = useScramble({
     text: 'Hello!',
-    speed: 0.2,
+    speed: 1,
     tick: 1,
     step: 1,
     overflow: false,
     overdrive: false,
     scramble: 4,
+    onAnimationEnd: () => {
+      setPreName('My name is ')
+    },
   })
 
   const { ref: preNameRef } = useScramble({
-    text: 'My name is ',
-    speed: 0.5,
+    text: preName,
+    speed: 1,
     tick: 1,
     step: 1,
     scramble: 3,
     overflow: false,
     overdrive: false,
     onAnimationEnd: () => {
-      setName('Christian Hall')
+      if (preName) setName('Christian Hall')
     },
   })
 
   const { ref: nameRef } = useScramble({
     text: name,
-    speed: 0.5,
+    speed: 1,
     tick: 1,
     step: 1,
     scramble: 3,
     overflow: false,
     overdrive: false,
+    onAnimationEnd: () => {
+      if (name) setPeriod('.')
+    },
+  })
+
+  const { ref: periodRef } = useScramble({
+    text: period,
+    speed: 1,
+    tick: 1,
+    step: 1,
+    scramble: 1,
+    overflow: false,
+    overdrive: false,
+    onAnimationEnd: () => {
+      if (period)
+        setBio(
+          'I’m a product-oriented software engineer who cares deeply for usable designs and sustainable development. Let’s build something together.'
+        )
+    },
   })
 
   const { ref: bioRef } = useScramble({
-    text: 'I’m a product-oriented software engineer who cares deeply for usable designs and sustainable development. Let’s build something together.',
-    speed: 2,
+    text: bio,
+    speed: 1,
     tick: 1,
     step: 1,
     scramble: 2,
     overflow: false,
     overdrive: false,
+    onAnimationEnd: () => {
+      if (bio) setShowIcons(true)
+    },
   })
 
   return (
@@ -57,13 +87,14 @@ function Home() {
         <p className={styles.homeMainCopy}>
           <span ref={preNameRef}></span>
           <span className={styles.homeName} ref={nameRef} />
+          <span ref={periodRef} />
         </p>
         <p className={styles.homeMainCopy} ref={bioRef} />
 
         <div className={styles.homeLinks}>
           <a
             href="/Christian Hall Resume.pdf"
-            className={styles.homeLink}
+            className={`${styles.homeLink} ${showIcons ? styles.homeLinkVisible1 : ''}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +104,7 @@ function Home() {
           </a>
           <a
             href="https://bsky.app/profile/christianhall.dev"
-            className={styles.homeLink}
+            className={`${styles.homeLink} ${showIcons ? styles.homeLinkVisible2 : ''}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -86,7 +117,7 @@ function Home() {
           </a>
           <a
             href="https://github.com/jchristianhall"
-            className={styles.homeLink}
+            className={`${styles.homeLink} ${showIcons ? styles.homeLinkVisible3 : ''}`}
             target="_blank"
             rel="noopener noreferrer"
           >

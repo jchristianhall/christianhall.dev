@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { style, keyframes } from '@vanilla-extract/css'
 
 export const home = style({
   display: 'flex',
@@ -6,12 +6,17 @@ export const home = style({
   backgroundColor: '#191d21',
   justifyContent: 'center',
   alignItems: 'center',
+  minHeight: '460px',
+  height: '100vh',
+  position: 'relative',
 })
 
 export const homeContent = style({
   flexDirection: 'column',
-  width: '50%',
+  width: '100%',
+  maxWidth: '800px',
   display: 'flex',
+  padding: '0 2rem',
   gap: '2rem',
 })
 
@@ -30,10 +35,16 @@ export const homeLinks = style({
   alignItems: 'center',
 })
 
+const fadeIn = keyframes({
+  from: { opacity: 0 },
+  to: { opacity: 1 },
+})
+
 export const homeLink = style({
   color: 'rgb(117, 242, 139)',
   textDecoration: 'none',
   marginRight: '1rem',
+  opacity: 0,
   transition: 'transform 0.3s ease-in-out, color 0.3s ease-in-out',
   selectors: {
     '&:last-child': {
@@ -45,6 +56,21 @@ export const homeLink = style({
       transform: 'scale(1.1)',
     },
   },
+})
+
+export const homeLinkVisible1 = style({
+  animation: `${fadeIn} 0.4s ease-out forwards`,
+  animationDelay: '0s',
+})
+
+export const homeLinkVisible2 = style({
+  animation: `${fadeIn} 0.4s ease-out forwards`,
+  animationDelay: '0.15s',
+})
+
+export const homeLinkVisible3 = style({
+  animation: `${fadeIn} 0.4s ease-out forwards`,
+  animationDelay: '0.3s',
 })
 
 export const homeFooter = style({
