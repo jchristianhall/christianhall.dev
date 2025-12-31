@@ -1,7 +1,7 @@
 import { FileUser } from 'lucide-react'
 import BlueskyIcon from '../images/bluesky.svg'
 import GithubIcon from '../images/github.svg'
-import * as styles from './home.css'
+import * as styles from '../styles/home.css'
 import { useScramble } from 'use-scramble'
 import { useState } from 'react'
 

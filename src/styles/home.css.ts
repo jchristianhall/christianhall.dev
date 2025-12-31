@@ -81,3 +81,4 @@ export const homeFooter = style({
   left: '50%',
   transform: 'translateX(-50%)',
 })
+

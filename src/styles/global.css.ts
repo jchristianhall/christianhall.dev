@@ -12,3 +12,4 @@ globalStyle('html, body, #__next', {
   width: '100%',
   fontFamily: "'Josefin Sans', sans-serif",
 })
+
