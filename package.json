@@ -16,7 +16,7 @@
   "scripts": {
     "format": "prettier --write src/**/*.{js,jsx}",
     "deploy": "vercel",
-    "dev": "next",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start"
   },

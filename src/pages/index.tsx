@@ -42,7 +42,7 @@ function Home() {
 
   const { ref: bioRef } = useScramble({
     text: 'I’m a product-oriented software engineer who cares deeply for usable designs and sustainable development. Let’s build something together.',
-    speed: 0.5,
+    speed: 2,
     tick: 1,
     step: 1,
     scramble: 2,
@@ -54,10 +54,10 @@ function Home() {
     <main className={styles.home}>
       <div className={styles.homeContent}>
         <p className={styles.homeMainCopy} ref={helloRef} />
-        <div className={styles.homeNameContainer}>
-          <p className={styles.homeMainCopy} ref={preNameRef}></p>
-          <p className={styles.homeName} ref={nameRef} />
-        </div>
+        <p className={styles.homeMainCopy}>
+          <span ref={preNameRef}></span>
+          <span className={styles.homeName} ref={nameRef} />
+        </p>
         <p className={styles.homeMainCopy} ref={bioRef} />
 
         <div className={styles.homeLinks}>
