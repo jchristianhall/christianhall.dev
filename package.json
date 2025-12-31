@@ -6,8 +6,8 @@
   "version": "4.0.1",
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
-    "lucide-react": "^0.540.0",
-    "next": "^15.0.3",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.1",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -28,11 +28,11 @@
     "url": "https://github.com/jchristianhall/jchristianhall.github.io/issues"
   },
   "devDependencies": {
-    "@types/node": "^22.9.3",
-    "@types/react": "^18.3.12",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
     "@vanilla-extract/next-plugin": "^2.4.7",
     "prettier": "^3.3.3",
     "typescript": "^5.7.2",
-    "vercel": "^46.0.2"
+    "vercel": "^50.1.3"
   }
 }
