@@ -17,8 +17,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "deploy": "vercel",
     "dev": "next dev --webpack",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build --webpack",
+    "start": "next start --webpack"
   },
   "repository": {
     "type": "git",
