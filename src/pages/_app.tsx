@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
+import '@fontsource/monaspace-neon'
 import '../styles/global.css'
 
 export default function App({ Component, pageProps }) {

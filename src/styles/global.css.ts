@@ -10,6 +10,6 @@ globalStyle('html, body, #__next', {
   display: 'flex',
   height: '100%',
   width: '100%',
-  fontFamily: "'Josefin Sans', sans-serif",
+  fontFamily: "'Monaspace Neon', monospace",
 })
 
