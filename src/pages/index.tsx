@@ -109,7 +109,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <BlueskyIcon
-              alt="Bluesky"
+              aria-label="Bluesky"
               width={24}
               height={24}
               color="currentColor"
@@ -122,7 +122,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <GithubIcon
-              alt="GitHub"
+              aria-label="GitHub"
               width={24}
               height={24}
               color="currentColor"
