@@ -7,6 +7,7 @@
   "dependencies": {
     "@fontsource/monaspace-neon": "^5.2.5",
     "@svgr/webpack": "^8.1.0",
+    "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
     "next": "^16.1.1",
     "posthog-js": "^1.312.0",
