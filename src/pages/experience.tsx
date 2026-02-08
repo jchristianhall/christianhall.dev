@@ -1,3 +1,10 @@
+/**
+ * Experience Page
+ *
+ * NOTE: This page was generated with the assistance of AI.
+ * Content and layout may have been authored or refined by AI tools.
+ */
+
 import { useRef } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
@@ -205,6 +212,11 @@ function Experience() {
 
       {/* Fixed content layer */}
       <div className={styles.fixedContainer}>
+        <div className={styles.wipBanner}>
+          <span className={styles.wipIcon}>🚧</span>
+          This page is a work in progress — how did you even get here?
+        </div>
+
         <header className={styles.header}>
           <Link href="/" className={styles.backButton}>
             <ArrowLeft size={18} />

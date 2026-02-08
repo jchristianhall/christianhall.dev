@@ -395,6 +395,33 @@ export const cardTag = style({
   },
 })
 
+// Work in progress banner
+export const wipBanner = style({
+  position: 'fixed',
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 200,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '0.5rem',
+  padding: '0.625rem 1rem',
+  fontSize: '0.8125rem',
+  fontWeight: 500,
+  color: '#fbbf24',
+  background: 'rgba(251, 191, 36, 0.08)',
+  borderTop: '1px solid rgba(251, 191, 36, 0.2)',
+  backdropFilter: 'blur(12px)',
+  pointerEvents: 'none',
+  letterSpacing: '0.01em',
+})
+
+export const wipIcon = style({
+  fontSize: '0.875rem',
+  lineHeight: 1,
+})
+
 // Scroll hint
 const bounce = keyframes({
   '0%, 100%': { transform: 'translateY(0)' },
